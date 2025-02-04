@@ -8,8 +8,8 @@ fmr.addEventListener("submit", (e) => {
     const medicamento = fmr.inMedicamento.value;
     const preco =  Number(fmr.inValor.value);
     
-    const promocao = Math.floor(preco *2);
+    const promocao = Math.floor(preco *2); //Math floor arredonda o valor para baixo.
     
     resp1.innerText = `Promoção ${medicamento}`;
-    resp2.innerText = `Compre 2 e pague R$ ${promocao.toFixed(2)};`
+    resp2.innerText = `Compre 2 e pague R$ ${promocao.toFixed(2)}`;
 })
