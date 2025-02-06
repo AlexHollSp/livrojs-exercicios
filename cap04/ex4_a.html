@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa Par ou Ímpar</title>
+</head>
+
+<!-- 
+a) Elaborar um programa que leia um número. Informe se ele é par ou
+ímpar. Faça com o if... else... tradicional e, após, tente criar a condição com o
+operador ternário. A Figura 4.7 ilustra a tela de execução do programa. Para
+os exercícios, foi utilizada uma gura padrão, mas você pode substituí-la
+caso tenha interesse. -->
+
+<body>
+    <h1>Programa Par ou Ímpar</h1>
+    <form>
+        <p>Número:
+            <input type="number" id="inNumero" required>
+        </p>
+        <input type="submit" value="Verificar se é par ou ímpar">
+    </form>
+    <h3 id="outResp"></h3>
+
+    <script>
+        const frm = document.querySelector("form")
+        const resp = document.querySelector("#outResp")
+
+        frm.addEventListener("submit", (e) => {
+            e.preventDefault()
+            const numero = Number(frm.inNumero.value)
+            if (numero % 2 === 0) {
+                resp.innerText = `Número ${numero} Par`
+            } else {
+                resp.innerText = `Número ${numero} Ímpar`
+            }
+        })
+    </script>
+</body>
+
+</html>
