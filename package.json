@@ -2,5 +2,8 @@
   "dependencies": {
     "install": "^0.13.0",
     "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.11"
   }
 }
